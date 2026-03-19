@@ -73,18 +73,18 @@ export default function HeroSection() {
     }, 10500);
   };
 
-  const CARD_W = 384;
-  const CARD_H = 312;
+  const CARD_W = 307;
+  const CARD_H = 250;
   const total = CAROUSEL_SLIDES.length;
 
   // Fixed positions for each stack slot (0=front/active, 1=middle, 2=back)
   const SLOTS = [
-    { x: 90,  y: 148, rotate: -2,   z: 3 },
-    { x: 196, y: 0,   rotate: 4,    z: 2 },
-    { x: 0,   y: 8,   rotate: -5,   z: 1 },
+    { x: 72,  y: 118, rotate: -2,   z: 3 },
+    { x: 157, y: 0,   rotate: 4,    z: 2 },
+    { x: 0,   y: 6,   rotate: -5,   z: 1 },
   ];
-  const CONTAINER_W = CARD_W + 196;
-  const CONTAINER_H = CARD_H + 148;
+  const CONTAINER_W = CARD_W + 157;
+  const CONTAINER_H = CARD_H + 118;
 
   return (
     <section
