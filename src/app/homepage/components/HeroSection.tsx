@@ -70,16 +70,23 @@ export default function HeroSection() {
     }, 3500);
   };
 
-  const CARD_W = 480;
-  const CARD_H = 390;
-  const OFFSET_X = 14;
-  const OFFSET_Y = Math.round(CARD_H * 0.5);
+  const CARD_W = 384;
+  const CARD_H = 312;
   const total = CAROUSEL_SLIDES.length;
+
+  // Fixed positions for each stack slot (0=front/active, 1=middle, 2=back)
+  const SLOTS = [
+    { x: 90,  y: 148, rotate: -2,   z: 3 },
+    { x: 196, y: 0,   rotate: 4,    z: 2 },
+    { x: 0,   y: 8,   rotate: -5,   z: 1 },
+  ];
+  const CONTAINER_W = CARD_W + 196;
+  const CONTAINER_H = CARD_H + 148;
 
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-start pt-28 pb-20 overflow-hidden">
+      className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
       
       <div
         className="absolute inset-0 pointer-events-none"
@@ -88,7 +95,7 @@ export default function HeroSection() {
         }}
         aria-hidden="true" />
       
-      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-start relative z-10">
+      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-center relative z-10">
         {/* LEFT: Typography */}
         <div className="lg:col-span-6 xl:col-span-6 space-y-8">
           <div className="reveal active">
@@ -131,35 +138,28 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* RIGHT: Stacked Card Deck */}
-        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-start justify-center parallax-img pt-8">
+        {/* RIGHT: Scattered Card Deck */}
+        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-center justify-center parallax-img">
           <div
             className="relative"
-            style={{
-              width: CARD_W + OFFSET_X * (total - 1),
-              height: CARD_H + OFFSET_Y * (total - 1),
-            }}>
+            style={{ width: CONTAINER_W, height: CONTAINER_H }}>
             {CAROUSEL_SLIDES.map((slide, idx) => {
               const stackPos = (idx - activeSlide + total) % total;
-              const zIndex = total - stackPos;
-              const opacity = 1;
-              const translateX = stackPos * OFFSET_X;
-              const translateY = stackPos * OFFSET_Y;
+              const slot = SLOTS[stackPos];
 
               return (
                 <div
                   key={slide.id}
-                  onClick={() => goToSlide(idx)}
+                  onClick={() => stackPos !== 0 && goToSlide(idx)}
                   style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: CARD_W,
                     height: CARD_H,
-                    transform: `translate(${translateX}px, ${translateY}px)`,
-                    zIndex,
-                    opacity,
-                    transition: 'transform 0.65s cubic-bezier(0.16,1,0.3,1), opacity 0.65s cubic-bezier(0.16,1,0.3,1)',
+                    transform: `translate(${slot.x}px, ${slot.y}px) rotate(${slot.rotate}deg)`,
+                    zIndex: slot.z,
+                    transition: 'transform 1s cubic-bezier(0.34, 1.15, 0.64, 1)',
                     cursor: stackPos !== 0 ? 'pointer' : 'default',
                     borderRadius: '1.25rem',
                     overflow: 'hidden',
@@ -193,7 +193,7 @@ export default function HeroSection() {
             {/* Dot navigation */}
             <div
               className="absolute flex gap-1.5"
-              style={{ bottom: -(OFFSET_Y * (total - 1) + 20), left: '50%', transform: 'translateX(-50%)' }}>
+              style={{ bottom: -28, left: '50%', transform: 'translateX(-50%)' }}>
               {CAROUSEL_SLIDES.map((_, idx) =>
               <button
                 key={idx}
