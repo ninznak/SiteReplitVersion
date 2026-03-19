@@ -89,7 +89,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-start pb-36 overflow-hidden hero-section-pt">
+      className="relative flex items-start pb-36 overflow-hidden pt-20">
       
       <div
         className="absolute inset-0 pointer-events-none"
@@ -142,7 +142,7 @@ export default function HeroSection() {
         </div>
 
         {/* RIGHT: Scattered Card Deck */}
-        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-center justify-center parallax-img">
+        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-center justify-center parallax-img pt-16">
           <div
             className="relative"
             style={{ width: CONTAINER_W, height: CONTAINER_H }}>
