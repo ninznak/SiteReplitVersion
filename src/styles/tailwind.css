@@ -38,15 +38,10 @@
   font-display: swap;
 }
 
-/* 45° semi-transparent stripes on light background — soft edges like orbs */
+/* Soft dot pattern on light background */
 .bg-bg {
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent           0px,
-    rgba(13,31,18, 0.10)  38px,
-    transparent           76px,
-    transparent           152px
-  );
+  background-image: radial-gradient(circle, rgba(13,31,18,0.12) 0%, transparent 50%);
+  background-size: 76px 76px;
   background-attachment: fixed;
 }
 
