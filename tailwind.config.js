@@ -19,7 +19,7 @@ module.exports = {
           light: '#C5E07A',
         },
         bg: {
-          DEFAULT: '#d0eb9c',
+          DEFAULT: '#e9f9ca',
           card: '#FFFFFF',
           dark: '#0D1F12',
           dark2: '#162B1C',
