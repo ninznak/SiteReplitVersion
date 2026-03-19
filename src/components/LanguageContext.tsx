@@ -179,15 +179,26 @@ const LangContext = createContext<LangContextType>({
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('en');
+  const [lang, setLang] = useState<Lang>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('lang');
+      if (saved === 'en' || saved === 'ru') return saved;
+    }
+    return 'ru';
+  });
   const t = (key: string) => translations[lang][key] ?? key;
+
+  const handleSetLang = (l: Lang) => {
+    setLang(l);
+    if (typeof window !== 'undefined') localStorage.setItem('lang', l);
+  };
 
   useEffect(() => {
     document.documentElement.setAttribute('lang', lang);
   }, [lang]);
 
   return (
-    <LangContext.Provider value={{ lang, setLang, t }}>
+    <LangContext.Provider value={{ lang, setLang: handleSetLang, t }}>
       {children}
     </LangContext.Provider>
   );
