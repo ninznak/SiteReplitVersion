@@ -6,7 +6,7 @@ const timeline = [
   { year: '2014', title: 'Начало пути', desc: 'Первые шаги в 3D-моделировании и создание первых барельефов.' },
   { year: '2017', title: 'Профессиональный рост', desc: 'Начало работы с нумизматикой и изготовлением медалей.' },
   { year: '2020', title: 'Цифровая трансформация', desc: 'Внедрение AI-инструментов в творческий процесс.' },
-  { year: '2024', title: 'CreativeSphere', desc: 'Запуск студии и объединение 3D и AI-практик.' },
+  { year: '2024', title: 'KurilenkoArt', desc: 'Запуск студии и объединение 3D и AI-практик.' },
 ];
 
 const skills = [
@@ -25,7 +25,7 @@ export default function AboutPageContent() {
         <div className="text-center mb-16">
           <span className="section-label">О студии</span>
           <h1 className="font-display text-5xl md:text-6xl font-semibold mt-4 leading-tight tracking-display">
-            CreativeSphere
+            KurilenkoArt
           </h1>
           <p className="text-foreground-muted mt-4 max-w-2xl mx-auto leading-relaxed">
             Где 3D-мастерство встречает AI-интеллект. Создаём уникальные цифровые и физические произведения искусства.
@@ -37,7 +37,7 @@ export default function AboutPageContent() {
           <div>
             <h2 className="font-display text-3xl font-semibold mb-6">Наша миссия</h2>
             <p className="text-foreground-muted leading-relaxed mb-4">
-              CreativeSphere — это творческая студия, объединяющая традиционное 3D-моделирование с передовыми AI-технологиями. 
+              KurilenkoArt — это творческая студия, объединяющая традиционное 3D-моделирование с передовыми AI-технологиями. 
               Мы создаём барельефы, медали, монеты и сувениры, а также исследуем возможности AI-генерации изображений и видео.
             </p>
             <p className="text-foreground-muted leading-relaxed">
@@ -47,7 +47,7 @@ export default function AboutPageContent() {
           <div className="relative aspect-square rounded-3xl overflow-hidden">
             <AppImage
               src="/assets/images/portfolio_3d_1.svg"
-              alt="CreativeSphere studio"
+              alt="KurilenkoArt studio"
               fill
               className="object-cover"
             />

@@ -38,7 +38,7 @@ export default function Header() {
           <Link href="/homepage" className="flex items-center gap-2.5 z-50">
             <AppLogo size={36} />
             <span className="font-display text-xl font-semibold tracking-tight text-foreground hidden sm:block">
-              CreativeSphere
+              KurilenkoArt
             </span>
           </Link>
 

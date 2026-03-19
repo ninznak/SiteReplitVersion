@@ -85,7 +85,7 @@ export default function AuthPanel() {
         <div className="relative z-10">
           <Link href="/homepage" className="flex items-center gap-2.5">
             <AppLogo size={36} />
-            <span className="font-display text-xl font-semibold text-white tracking-tight">CreativeSphere</span>
+            <span className="font-display text-xl font-semibold text-white tracking-tight">KurilenkoArt</span>
           </Link>
         </div>
 
@@ -162,7 +162,7 @@ export default function AuthPanel() {
         <div className="lg:hidden mb-10">
           <Link href="/homepage" className="flex items-center gap-2.5 justify-center">
             <AppLogo size={36} />
-            <span className="font-display text-xl font-semibold text-foreground tracking-tight">CreativeSphere</span>
+            <span className="font-display text-xl font-semibold text-foreground tracking-tight">KurilenkoArt</span>
           </Link>
         </div>
 
@@ -399,7 +399,7 @@ export default function AuthPanel() {
           <div className="mt-8 text-center">
             <Link href="/homepage" className="text-sm text-foreground-subtle hover:text-primary transition-colors inline-flex items-center gap-1.5">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg>
-              Back to CreativeSphere
+              Back to KurilenkoArt
             </Link>
           </div>
         </div>

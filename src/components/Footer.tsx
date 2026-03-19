@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2.5">
               <AppLogo size={32} />
-              <span className="font-display text-lg font-semibold text-foreground">CreativeSphere</span>
+              <span className="font-display text-lg font-semibold text-foreground">KurilenkoArt</span>
             </div>
             <p className="text-sm text-foreground-subtle max-w-xs leading-relaxed">
               {t('footer.tagline')}
@@ -58,7 +58,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-primary/10 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-[11px] uppercase tracking-widest text-foreground-subtle">
-            © 2026 CreativeSphere. All rights reserved.
+            © 2026 KurilenkoArt. All rights reserved.
           </p>
           <p className="text-[11px] text-foreground-subtle">
             3D Modeling · AI Content · Digital Art

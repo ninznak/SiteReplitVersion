@@ -9,7 +9,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'CreativeSphere — 3D Modeling & AI Content Portfolio',
+  title: 'KurilenkoArt — 3D Modeling & AI Content Portfolio',
   description: 'Personal portfolio of bas relief, medals, coins, and souvenir 3D models alongside AI-generated images and videos. Shop, articles, and community forum.',
   icons: {
     icon: [

@@ -1,4 +1,4 @@
-# CreativeSphere
+# KurilenkoArt
 
 A Next.js 15 portfolio and community platform for 3D modeling and AI-generated content. Features a shop, forum, news section, and portfolio pages.
 
