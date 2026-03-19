@@ -38,6 +38,17 @@
   font-display: swap;
 }
 
+/* 45° semi-transparent stripes on light background — soft edges like orbs */
+.bg-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent           0px,
+    rgba(13,31,18, 0.10)  19px,
+    transparent           38px,
+    transparent           76px
+  );
+}
+
 /* Hero section responsive top padding */
 .hero-section-pt {
   padding-top: calc(3rem + 1cm);
