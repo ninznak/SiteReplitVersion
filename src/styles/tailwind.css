@@ -38,6 +38,16 @@
   font-display: swap;
 }
 
+/* Hero section responsive top padding */
+.hero-section-pt {
+  padding-top: calc(3rem + 1cm);
+}
+@media (min-width: 1024px) {
+  .hero-section-pt {
+    padding-top: calc(6rem + 2cm);
+  }
+}
+
 /* Apply LT Remark to all display headings when Russian language is active */
 html[lang="ru"] h1,
 html[lang="ru"] h2,
