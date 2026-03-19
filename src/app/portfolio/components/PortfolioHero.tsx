@@ -6,7 +6,7 @@ export default function PortfolioHero() {
   const { t } = useLang();
 
   return (
-    <section className="relative pt-12 pb-4 overflow-hidden">
+    <section className="relative pt-28 pb-4 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 60%, rgba(168,201,87,0.1) 0%, transparent 70%)' }}
