@@ -86,7 +86,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center pt-20 pb-6 overflow-hidden">
+      className="relative min-h-screen flex items-start pt-24 pb-10 overflow-hidden">
       
       <div
         className="absolute inset-0 pointer-events-none"
@@ -95,7 +95,7 @@ export default function HeroSection() {
         }}
         aria-hidden="true" />
       
-      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-start relative z-10">
         {/* LEFT: Typography */}
         <div className="lg:col-span-6 xl:col-span-6 space-y-8">
           <div className="reveal active">
