@@ -86,7 +86,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-start pb-20 overflow-hidden"
+      className="relative flex items-start pb-36 overflow-hidden"
       style={{ paddingTop: 'calc(6rem + 2cm)' }}>
       
       <div
