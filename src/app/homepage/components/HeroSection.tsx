@@ -53,7 +53,6 @@ export default function HeroSection() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Auto-advance carousel
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
@@ -71,12 +70,17 @@ export default function HeroSection() {
     }, 3500);
   };
 
+  const CARD_W = 320;
+  const CARD_H = 260;
+  const OFFSET_X = 14;
+  const OFFSET_Y = 16;
+  const total = CAROUSEL_SLIDES.length;
+
   return (
     <section
       ref={sectionRef}
       className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
       
-      {/* Radial glow behind hero */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -86,7 +90,7 @@ export default function HeroSection() {
       
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-center relative z-10">
         {/* LEFT: Typography */}
-        <div className="lg:col-span-6 xl:col-span-5 space-y-8">
+        <div className="lg:col-span-6 xl:col-span-6 space-y-8">
           <div className="reveal active">
             <span className="section-label">{t('hero.label')}</span>
           </div>
@@ -113,7 +117,6 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Stats row */}
           <div className="reveal active stagger-4 flex gap-10 pt-6 border-t border-primary/10">
             {[
             { num: '200+', label: '3D Models' },
@@ -128,53 +131,81 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* RIGHT: Carousel */}
-        <div className="lg:col-span-6 xl:col-span-7 relative h-[560px] hidden md:block">
-          <div className="hero-carousel parallax-img">
-            {CAROUSEL_SLIDES.map((slide, idx) =>
-            <div
-              key={slide.id}
-              className={`hero-carousel-slide rounded-4xl overflow-hidden shadow-green-lg border border-primary/15 ${idx === activeSlide ? 'active' : ''}`}>
-              
-                <AppImage
-                src={slide.src}
-                alt={slide.alt}
-                fill
-                className="object-cover"
-                priority={idx === 0} />
-              
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/60 via-transparent to-transparent" />
-                {/* Tag */}
-                <div className="absolute top-5 left-5">
-                  <span className="tag-pill">{slide.tag}</span>
-                </div>
-                {/* Bottom info */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="font-display text-xl font-semibold text-white leading-tight">{slide.title}</p>
-                  <div className="flex items-center gap-2 mt-1.5">
-                    {slide.pulse && <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />}
-                    <span className="text-xs text-accent font-medium">{slide.subtitle}</span>
+        {/* RIGHT: Stacked Card Deck */}
+        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-center justify-center parallax-img">
+          <div
+            className="relative"
+            style={{
+              width: CARD_W + OFFSET_X * (total - 1),
+              height: CARD_H + OFFSET_Y * (total - 1),
+            }}>
+            {CAROUSEL_SLIDES.map((slide, idx) => {
+              const stackPos = (idx - activeSlide + total) % total;
+              const zIndex = total - stackPos;
+              const opacity = stackPos === 0 ? 1 : 0.5;
+              const translateX = stackPos * OFFSET_X;
+              const translateY = stackPos * OFFSET_Y;
+
+              return (
+                <div
+                  key={slide.id}
+                  onClick={() => goToSlide(idx)}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: CARD_W,
+                    height: CARD_H,
+                    transform: `translate(${translateX}px, ${translateY}px)`,
+                    zIndex,
+                    opacity,
+                    transition: 'transform 0.65s cubic-bezier(0.16,1,0.3,1), opacity 0.65s cubic-bezier(0.16,1,0.3,1)',
+                    cursor: stackPos !== 0 ? 'pointer' : 'default',
+                    borderRadius: '1.25rem',
+                    overflow: 'hidden',
+                  }}
+                  className="shadow-green-lg border border-primary/15">
+
+                  <AppImage
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    className="object-cover"
+                    priority={idx === 0} />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/60 via-transparent to-transparent" />
+
+                  <div className="absolute top-3 left-3">
+                    <span className="tag-pill text-xs">{slide.tag}</span>
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="font-display text-sm font-semibold text-white leading-tight">{slide.title}</p>
+                    <div className="flex items-center gap-2 mt-1">
+                      {slide.pulse && <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
+                      <span className="text-xs text-accent font-medium">{slide.subtitle}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              );
+            })}
 
             {/* Dot navigation */}
-            <div className="hero-carousel-dots">
+            <div
+              className="absolute flex gap-1.5"
+              style={{ bottom: -(OFFSET_Y * (total - 1) + 20), left: '50%', transform: 'translateX(-50%)' }}>
               {CAROUSEL_SLIDES.map((_, idx) =>
               <button
                 key={idx}
                 className={`hero-carousel-dot ${idx === activeSlide ? 'active' : ''}`}
                 onClick={() => goToSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`} />
-
               )}
             </div>
           </div>
         </div>
       </div>
-      {/* Scroll indicator */}
+
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 opacity-60">
         <span className="text-[10px] uppercase tracking-widest text-foreground-subtle">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
