@@ -207,6 +207,26 @@ export default function HeroSection() {
         </div>
       </div>
 
+      {/* Infinity marquee stripe */}
+      <div className="absolute bottom-28 left-0 right-0 z-10 overflow-hidden" style={{ height: 64 }}>
+        <div
+          style={{
+            display: 'flex',
+            width: 'max-content',
+            animation: 'marqueeScroll 40s linear infinite',
+          }}>
+          {[0, 1, 2, 3].map((i) => (
+            <img
+              key={i}
+              src={i % 2 === 0 ? '/stripe-1part.png' : '/stripe-2part.png'}
+              alt=""
+              aria-hidden="true"
+              style={{ height: 64, width: 'auto', display: 'block', flexShrink: 0 }}
+            />
+          ))}
+        </div>
+      </div>
+
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 opacity-60">
         <span className="text-[15px] uppercase tracking-widest text-foreground-subtle">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />

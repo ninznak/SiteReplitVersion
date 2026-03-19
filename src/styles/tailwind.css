@@ -116,6 +116,11 @@ body {
   --delay: -18s;
 }
 
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @keyframes orbFloat {
   0%   { transform: translate(0px, 0px) scale(1); }
   25%  { transform: translate(40px, -60px) scale(1.05); }
