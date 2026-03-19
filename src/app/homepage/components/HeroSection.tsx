@@ -105,7 +105,7 @@ export default function HeroSection() {
           <h1 className="reveal active stagger-1 font-display leading-[0.88] tracking-display" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
             {t('hero.title1')}{' '}
             <br />
-            <span className="font-light italic text-primary">{t('hero.title2')}</span>
+            <span className="font-light italic text-gradient-animated">{t('hero.title2')}</span>
             <br />
             <span className="text-gradient-animated">{t('hero.title3')}</span>
           </h1>
