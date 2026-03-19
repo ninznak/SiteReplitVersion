@@ -102,8 +102,8 @@ export default function HeroSection() {
             <span className="section-label">{t('hero.label')}</span>
           </div>
 
-          <h1 className="reveal active stagger-1 font-display leading-[0.88] tracking-display" style={{ fontSize: 'clamp(3rem, 9vw, 8rem)' }}>
-            <span className="font-semibold text-foreground">{t('hero.title1')}</span>{' '}
+          <h1 className="reveal active stagger-1 font-display leading-[0.88] tracking-display" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
+            {t('hero.title1')}{' '}
             <br />
             <span className="italic text-gradient-animated">{t('hero.title2')}</span>
             <br />
