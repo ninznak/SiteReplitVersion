@@ -86,7 +86,8 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-start pt-24 pb-10 overflow-hidden">
+      className="relative min-h-screen flex items-start pb-10 overflow-hidden"
+      style={{ paddingTop: 'calc(6rem + 2cm)' }}>
       
       <div
         className="absolute inset-0 pointer-events-none"
