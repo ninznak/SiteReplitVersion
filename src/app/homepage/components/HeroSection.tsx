@@ -9,26 +9,29 @@ const CAROUSEL_SLIDES = [
   id: 'ai-content',
   src: 'https://img.rocket.new/generatedImages/rocket_gen_img_106584dfb-1764689812608.png',
   alt: 'AI-generated surreal landscape with green tones and organic shapes',
-  tag: 'AI Content',
-  title: 'Generative Art Series',
-  subtitle: 'Neural Landscapes Vol.3'
+  tagKey: 'carousel.ai.tag',
+  titleKey: 'carousel.ai.title',
+  subtitleKey: 'carousel.ai.subtitle',
+  href: '/portfolio',
 },
 {
   id: 'commission',
   src: "https://images.unsplash.com/photo-1691317836447-2710cac29f1e",
   alt: 'Gold commemorative medal with intricate bas relief design',
-  tag: 'Latest Commission',
-  title: 'Silver Relief Panel',
-  subtitle: 'Custom Order · In Progress',
-  pulse: true
+  tagKey: 'carousel.commission.tag',
+  titleKey: 'carousel.commission.title',
+  subtitleKey: 'carousel.commission.subtitle',
+  pulse: true,
+  href: '/homepage#featured',
 },
 {
   id: '3d-models',
   src: 'https://img.rocket.new/generatedImages/rocket_gen_img_16e57863a-1768351656360.png',
   alt: 'Detailed 3D model of a commemorative coin with fine engraving',
-  tag: '3D Models',
-  title: 'Bas Relief Collection',
-  subtitle: '200+ Models Available'
+  tagKey: 'carousel.3d.tag',
+  titleKey: 'carousel.3d.title',
+  subtitleKey: 'carousel.3d.subtitle',
+  href: '/portfolio',
 }];
 
 
@@ -177,15 +180,20 @@ export default function HeroSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/60 via-transparent to-transparent" />
 
                   <div className="absolute top-3 left-3">
-                    <span className="tag-pill text-xs">{slide.tag}</span>
+                    <span className="tag-pill text-xs">{t(slide.tagKey)}</span>
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="font-display text-sm font-semibold text-white leading-tight">{slide.title}</p>
-                    <div className="flex items-center gap-2 mt-1">
-                      {slide.pulse && <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
-                      <span className="text-xs text-accent font-medium">{slide.subtitle}</span>
-                    </div>
+                    <Link
+                      href={slide.href}
+                      onClick={(e) => e.stopPropagation()}
+                      className="group block hover:opacity-80 transition-opacity">
+                      <p className="font-display text-sm font-semibold text-white leading-tight group-hover:underline underline-offset-2">{t(slide.titleKey)}</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        {slide.pulse && <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
+                        <span className="text-xs text-accent font-medium">{t(slide.subtitleKey)}</span>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               );

@@ -54,7 +54,7 @@ export default function FeaturedWorks() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="pt-14 pb-28 bg-bg-dark relative overflow-hidden z-10">
+    <section ref={sectionRef} id="featured" className="pt-14 pb-28 bg-bg-dark relative overflow-hidden z-10">
       {/* Dark section orb glow */}
       <div
         className="absolute inset-0 pointer-events-none"
