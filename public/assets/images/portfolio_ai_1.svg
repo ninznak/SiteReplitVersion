@@ -1,0 +1,36 @@
+<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgAI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1F12"/>
+      <stop offset="100%" style="stop-color:#1a2f1c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8C957"/>
+      <stop offset="100%" style="stop-color:#3D7A4F"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgAI)"/>
+  <!-- Neural network pattern -->
+  <g stroke="url(#glow)" stroke-width="1" opacity="0.4">
+    <line x1="100" y1="100" x2="200" y2="200"/>
+    <line x1="200" y1="200" x2="300" y2="150"/>
+    <line x1="300" y1="150" x2="400" y2="250"/>
+    <line x1="400" y1="250" x2="500" y2="180"/>
+    <line x1="100" y1="300" x2="200" y2="200"/>
+    <line x1="200" y1="200" x2="300" y2="350"/>
+    <line x1="300" y1="350" x2="400" y2="250"/>
+    <line x1="400" y1="250" x2="500" y2="320"/>
+  </g>
+  <g fill="url(#glow)">
+    <circle cx="100" cy="100" r="8" opacity="0.6"/>
+    <circle cx="100" cy="300" r="8" opacity="0.6"/>
+    <circle cx="200" cy="200" r="10" opacity="0.8"/>
+    <circle cx="300" cy="150" r="8" opacity="0.6"/>
+    <circle cx="300" cy="350" r="8" opacity="0.6"/>
+    <circle cx="400" cy="250" r="10" opacity="0.8"/>
+    <circle cx="500" cy="180" r="8" opacity="0.6"/>
+    <circle cx="500" cy="320" r="8" opacity="0.6"/>
+  </g>
+  <text x="300" y="400" font-family="system-ui, sans-serif" font-size="14" fill="#A8C957" text-anchor="middle" opacity="0.7">AI Generated</text>
+  <text x="300" y="420" font-family="system-ui, sans-serif" font-size="11" fill="white" text-anchor="middle" opacity="0.5">Neural Architecture</text>
+</svg>

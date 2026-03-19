@@ -1,0 +1,15 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shopBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EAF5E2"/>
+      <stop offset="100%" style="stop-color:#D4E8C8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#shopBg)"/>
+  <rect x="140" y="60" width="120" height="120" rx="8" fill="#3D7A4F" opacity="0.2"/>
+  <path d="M160 140 L200 100 L240 140" fill="none" stroke="#3D7A4F" stroke-width="3" opacity="0.5"/>
+  <circle cx="200" cy="90" r="20" fill="#A8C957" opacity="0.4"/>
+  <text x="200" y="210" font-family="system-ui, sans-serif" font-size="14" fill="#3D7A4F" text-anchor="middle" opacity="0.7">Product</text>
+  <text x="200" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#6B8F72" text-anchor="middle" opacity="0.5">Digital Download</text>
+  <text x="200" y="270" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#3D7A4F" text-anchor="middle" opacity="0.8">$29</text>
+</svg>

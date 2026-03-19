@@ -1,0 +1,18 @@
+<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgMedal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2f1c"/>
+      <stop offset="100%" style="stop-color:#0D1F12"/>
+    </linearGradient>
+    <linearGradient id="goldMedal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgMedal)"/>
+  <circle cx="300" cy="200" r="100" fill="url(#goldMedal)" opacity="0.6"/>
+  <circle cx="300" cy="200" r="80" fill="url(#goldMedal)" opacity="0.8"/>
+  <circle cx="300" cy="200" r="60" fill="#0D1F12" opacity="0.5"/>
+  <text x="300" y="210" font-family="system-ui, sans-serif" font-size="20" fill="#FFD700" text-anchor="middle" opacity="0.9">MEDAL</text>
+  <text x="300" y="350" font-family="system-ui, sans-serif" font-size="14" fill="#A8C957" text-anchor="middle" opacity="0.7">Commemorative Medal</text>
+</svg>
