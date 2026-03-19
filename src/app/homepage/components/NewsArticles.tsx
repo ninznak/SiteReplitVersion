@@ -69,7 +69,7 @@ export default function NewsArticles() {
   const secondary = articles?.slice(1);
 
   return (
-    <section ref={sectionRef} id="news" className="py-28 relative z-10">
+    <section ref={sectionRef} id="news" className="pt-14 pb-28 relative z-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="reveal">

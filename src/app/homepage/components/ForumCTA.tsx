@@ -46,7 +46,7 @@ export default function ForumCTA() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="forum" className="py-28 bg-bg-dark relative overflow-hidden z-10">
+    <section ref={sectionRef} id="forum" className="pt-14 pb-28 bg-bg-dark relative overflow-hidden z-10">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 60% 60% at 70% 40%, rgba(168,201,87,0.1) 0%, transparent 70%)' }}

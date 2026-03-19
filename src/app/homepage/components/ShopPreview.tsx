@@ -58,7 +58,7 @@ export default function ShopPreview() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="shop" className="py-28 bg-white/40 relative z-10">
+    <section ref={sectionRef} id="shop" className="pt-14 pb-28 bg-white/40 relative z-10">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 60% 40% at 80% 50%, rgba(168,201,87,0.07) 0%, transparent 70%)' }}

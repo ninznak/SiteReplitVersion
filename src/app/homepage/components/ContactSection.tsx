@@ -26,7 +26,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section ref={sectionRef} id="contact" className="py-28 relative z-10">
+    <section ref={sectionRef} id="contact" className="pt-14 pb-28 relative z-10">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 50% 50% at 30% 60%, rgba(61,122,79,0.07) 0%, transparent 70%)' }}
