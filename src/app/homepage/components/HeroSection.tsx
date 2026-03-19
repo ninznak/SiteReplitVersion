@@ -12,7 +12,7 @@ const CAROUSEL_SLIDES = [
   tagKey: 'carousel.ai.tag',
   titleKey: 'carousel.ai.title',
   subtitleKey: 'carousel.ai.subtitle',
-  href: '/portfolio',
+  href: '/portfolio#ai',
 },
 {
   id: 'commission',
@@ -31,7 +31,7 @@ const CAROUSEL_SLIDES = [
   tagKey: 'carousel.3d.tag',
   titleKey: 'carousel.3d.title',
   subtitleKey: 'carousel.3d.subtitle',
-  href: '/portfolio',
+  href: '/portfolio#3d',
 }];
 
 
