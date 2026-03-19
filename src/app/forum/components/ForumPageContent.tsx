@@ -86,7 +86,7 @@ export default function ForumPageContent() {
   });
 
   return (
-    <section className="pt-10 pb-20">
+    <section className="pt-20 pb-20">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">

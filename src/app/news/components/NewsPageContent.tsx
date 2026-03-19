@@ -78,7 +78,7 @@ export default function NewsPageContent() {
   const regular = articles.filter((a) => !a.featured);
 
   return (
-    <section className="pt-10 pb-20">
+    <section className="pt-20 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
