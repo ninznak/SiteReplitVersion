@@ -70,16 +70,16 @@ export default function HeroSection() {
     }, 3500);
   };
 
-  const CARD_W = 320;
-  const CARD_H = 260;
+  const CARD_W = 480;
+  const CARD_H = 390;
   const OFFSET_X = 14;
-  const OFFSET_Y = 16;
+  const OFFSET_Y = Math.round(CARD_H * 0.5);
   const total = CAROUSEL_SLIDES.length;
 
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
+      className="relative min-h-screen flex items-start pt-28 pb-20 overflow-hidden">
       
       <div
         className="absolute inset-0 pointer-events-none"
@@ -88,7 +88,7 @@ export default function HeroSection() {
         }}
         aria-hidden="true" />
       
-      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-start relative z-10">
         {/* LEFT: Typography */}
         <div className="lg:col-span-6 xl:col-span-6 space-y-8">
           <div className="reveal active">
@@ -132,7 +132,7 @@ export default function HeroSection() {
         </div>
 
         {/* RIGHT: Stacked Card Deck */}
-        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-center justify-center parallax-img">
+        <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-start justify-center parallax-img pt-8">
           <div
             className="relative"
             style={{
@@ -142,7 +142,7 @@ export default function HeroSection() {
             {CAROUSEL_SLIDES.map((slide, idx) => {
               const stackPos = (idx - activeSlide + total) % total;
               const zIndex = total - stackPos;
-              const opacity = stackPos === 0 ? 1 : 0.5;
+              const opacity = 1;
               const translateX = stackPos * OFFSET_X;
               const translateY = stackPos * OFFSET_Y;
 
