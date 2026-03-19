@@ -93,7 +93,7 @@ export default function PortfolioPreview() {
   const works = activeTab === '3d' ? works3D : worksAI;
 
   return (
-    <section ref={sectionRef} id="portfolio" className="py-28 relative z-10">
+    <section ref={sectionRef} id="portfolio" className="pt-6 pb-28 relative z-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
