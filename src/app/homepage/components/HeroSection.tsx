@@ -98,7 +98,7 @@ export default function HeroSection() {
       
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-start relative z-10">
         {/* LEFT: Typography */}
-        <div className="lg:col-span-6 xl:col-span-6 space-y-8 text-center lg:text-left">
+        <div className="lg:col-span-6 xl:col-span-6 space-y-8 text-center lg:text-left pr-4">
           <div className="reveal active">
             <span className="section-label">{t('hero.label')}</span>
           </div>
