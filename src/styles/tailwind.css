@@ -42,7 +42,7 @@
 /* Soft shadow on display headings */
 h1.font-display,
 h2.font-display {
-  text-shadow: 0 2px 14px rgba(13, 31, 18, 0.18);
+  text-shadow: 0 2px 14px rgba(13, 31, 18, 0.23);
 }
 
 /* Hero section responsive top padding */
