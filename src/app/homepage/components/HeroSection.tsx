@@ -56,7 +56,7 @@ export default function HeroSection() {
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
-    }, 3500);
+    }, 10500);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
@@ -67,7 +67,7 @@ export default function HeroSection() {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % CAROUSEL_SLIDES.length);
-    }, 3500);
+    }, 10500);
   };
 
   const CARD_W = 384;
@@ -159,10 +159,11 @@ export default function HeroSection() {
                     height: CARD_H,
                     transform: `translate(${slot.x}px, ${slot.y}px) rotate(${slot.rotate}deg)`,
                     zIndex: slot.z,
-                    transition: 'transform 1s cubic-bezier(0.34, 1.15, 0.64, 1)',
+                    transition: 'transform 3s cubic-bezier(0.34, 1.15, 0.64, 1)',
                     cursor: stackPos !== 0 ? 'pointer' : 'default',
                     borderRadius: '1.25rem',
                     overflow: 'hidden',
+                    boxShadow: '0 8px 30px rgba(13, 31, 18, 0.5)',
                   }}
                   className="shadow-green-lg border border-primary/15">
 
