@@ -43,9 +43,9 @@
   background-image: repeating-linear-gradient(
     45deg,
     transparent           0px,
-    rgba(13,31,18, 0.10)  19px,
-    transparent           38px,
-    transparent           76px
+    rgba(13,31,18, 0.10)  38px,
+    transparent           76px,
+    transparent           152px
   );
 }
 
