@@ -116,7 +116,7 @@ export default function Portfolio3DSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="3d" className="py-20 relative z-10">
+    <section ref={sectionRef} id="3d" className="pt-8 pb-20 relative z-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="grid lg:grid-cols-12 gap-8 items-start mb-14 reveal">

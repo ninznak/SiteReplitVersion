@@ -6,7 +6,7 @@ export default function PortfolioHero() {
   const { t } = useLang();
 
   return (
-    <section className="relative pt-40 pb-20 overflow-hidden">
+    <section className="relative pt-40 pb-4 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 60%, rgba(168,201,87,0.1) 0%, transparent 70%)' }}
@@ -26,7 +26,7 @@ export default function PortfolioHero() {
         </div>
 
         {/* Divider line */}
-        <div className="mt-16 h-px bg-gradient-to-r from-primary/30 via-accent/40 to-transparent" />
+        <div className="mt-6 h-px bg-gradient-to-r from-primary/30 via-accent/40 to-transparent" />
       </div>
     </section>
   );
