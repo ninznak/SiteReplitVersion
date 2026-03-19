@@ -207,26 +207,20 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/*
-        MARQUEE STRIPE — disabled for now, re-enable when needed.
-        Images: /stripe-1part.png and /stripe-2part.png (public folder).
-        Requires @keyframes marqueeScroll defined in tailwind.css.
-        Place just above the SCROLL indicator (absolute bottom-28).
-
-        <div className="absolute bottom-28 left-0 right-0 z-10 overflow-hidden" style={{ height: 64 }}>
-          <div style={{ display: 'flex', width: 'max-content', animation: 'marqueeScroll 40s linear infinite' }}>
-            {[0, 1, 2, 3].map((i) => (
-              <img
-                key={i}
-                src={i % 2 === 0 ? '/stripe-1part.png' : '/stripe-2part.png'}
-                alt=""
-                aria-hidden="true"
-                style={{ height: 64, width: 'auto', display: 'block', flexShrink: 0 }}
-              />
-            ))}
-          </div>
+      {/* MARQUEE STRIPE — images: /stripe-1part.png, /stripe-2part.png | keyframe: marqueeScroll in tailwind.css */}
+      <div className="absolute bottom-28 left-0 right-0 z-10 overflow-hidden" style={{ height: 64 }}>
+        <div style={{ display: 'flex', width: 'max-content', animation: 'marqueeScroll 40s linear infinite' }}>
+          {[0, 1, 2, 3].map((i) => (
+            <img
+              key={i}
+              src={i % 2 === 0 ? '/stripe-1part.png' : '/stripe-2part.png'}
+              alt=""
+              aria-hidden="true"
+              style={{ height: 64, width: 'auto', display: 'block', flexShrink: 0 }}
+            />
+          ))}
         </div>
-      */}
+      </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 opacity-60">
         <span className="text-[15px] uppercase tracking-widest text-foreground-subtle">Scroll</span>
