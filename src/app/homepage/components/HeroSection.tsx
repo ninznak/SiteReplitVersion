@@ -89,7 +89,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-start pb-36 overflow-hidden pt-20">
+      className="relative flex items-start pb-36 overflow-hidden pt-[120px]">
       
       <div
         className="absolute inset-0 pointer-events-none"
