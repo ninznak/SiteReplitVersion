@@ -11,7 +11,7 @@
   --accent: #A8C957;
   --accent-dark: #8BAF3A;
   --accent-light: #C5E07A;
-  --bg: #EAF5E2;
+  --bg: #E3F988;
   --bg-card: #FFFFFF;
   --bg-dark: #0e220f;
   --bg-dark-2: #193014;
@@ -63,16 +63,17 @@ body {
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(3px);
   will-change: transform;
   animation: orbFloat var(--duration) ease-in-out infinite;
   animation-delay: var(--delay);
+  background: rgba(135, 169, 107, 0.14);
+  border: 1.5px solid rgba(135, 169, 107, 0.32);
 }
 
 .orb-1 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(168, 201, 87, 0.55) 0%, rgba(61, 122, 79, 0.28) 60%, transparent 100%);
   top: -10%;
   left: -5%;
   --duration: 22s;
@@ -82,7 +83,6 @@ body {
 .orb-2 {
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(61, 122, 79, 0.45) 0%, rgba(168, 201, 87, 0.22) 60%, transparent 100%);
   top: 30%;
   right: -8%;
   --duration: 28s;
@@ -92,7 +92,6 @@ body {
 .orb-3 {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(197, 224, 122, 0.58) 0%, rgba(90, 158, 111, 0.28) 60%, transparent 100%);
   bottom: 10%;
   left: 20%;
   --duration: 18s;
@@ -102,7 +101,6 @@ body {
 .orb-4 {
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(61, 122, 79, 0.38) 0%, rgba(168, 201, 87, 0.18) 60%, transparent 100%);
   top: 60%;
   left: 50%;
   --duration: 32s;
@@ -112,7 +110,6 @@ body {
 .orb-5 {
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, rgba(168, 201, 87, 0.62) 0%, transparent 70%);
   top: 15%;
   left: 40%;
   --duration: 24s;
