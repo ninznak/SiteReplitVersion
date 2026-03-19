@@ -75,7 +75,7 @@ export default function ShopPageContent() {
   };
 
   return (
-    <section className="pt-32 pb-20">
+    <section className="pt-10 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
