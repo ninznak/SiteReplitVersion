@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'YsabeauSC';
+  src: url('/fonts/YsabeauSC-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply YsabeauSC to all display headings when Russian language is active */
+html[lang="ru"] h1,
+html[lang="ru"] h2,
+html[lang="ru"] h3,
+html[lang="ru"] .font-display {
+  font-family: 'YsabeauSC', serif !important;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
 
 :root {
