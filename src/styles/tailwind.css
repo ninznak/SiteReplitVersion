@@ -47,6 +47,7 @@
     transparent           76px,
     transparent           152px
   );
+  background-attachment: fixed;
 }
 
 /* Hero section responsive top padding */
