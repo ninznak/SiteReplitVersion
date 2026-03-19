@@ -18,7 +18,7 @@ export default function PortfolioHero() {
           <span className="section-label block mb-4">Portfolio 2026</span>
           <h1 className="font-display leading-[0.88] tracking-display font-bold" style={{ fontSize: 'clamp(3rem, 9vw, 8rem)' }}>
             <span className="text-foreground">Craft &</span>{' '}
-            <span className="italic text-gradient-animated">Intelligence</span>
+            <span className="italic text-gradient-animated" style={{ paddingRight: '0.2em' }}>Intelligence</span>
           </h1>
           <p className="text-lg text-foreground-muted mt-6 max-w-xl leading-relaxed mx-auto lg:mx-0">
             12 years of 3D modeling — bas relief, medals, coins, and souvenirs — alongside an evolving AI content practice.
