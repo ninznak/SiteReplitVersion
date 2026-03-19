@@ -116,10 +116,11 @@ body {
   --delay: -18s;
 }
 
+/* MARQUEE STRIPE animation — kept for future use with the scrolling stripe in HeroSection.tsx
 @keyframes marqueeScroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
+} */
 
 @keyframes orbFloat {
   0%   { transform: translate(0px, 0px) scale(1); }
