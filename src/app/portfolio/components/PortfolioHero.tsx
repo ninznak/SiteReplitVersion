@@ -14,13 +14,13 @@ export default function PortfolioHero() {
       />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl text-center lg:text-left">
           <span className="section-label block mb-4">Portfolio 2026</span>
-          <h1 className="font-display leading-[0.88] tracking-display font-semibold" style={{ fontSize: 'clamp(3rem, 9vw, 8rem)' }}>
+          <h1 className="font-display leading-[0.88] tracking-display font-bold" style={{ fontSize: 'clamp(3rem, 9vw, 8rem)' }}>
             <span className="text-foreground">Craft &</span>{' '}
             <span className="italic text-gradient-animated">Intelligence</span>
           </h1>
-          <p className="text-lg text-foreground-muted mt-6 max-w-xl leading-relaxed">
+          <p className="text-lg text-foreground-muted mt-6 max-w-xl leading-relaxed mx-auto lg:mx-0">
             12 years of 3D modeling — bas relief, medals, coins, and souvenirs — alongside an evolving AI content practice.
           </p>
         </div>

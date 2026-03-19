@@ -98,12 +98,12 @@ export default function HeroSection() {
       
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-start relative z-10">
         {/* LEFT: Typography */}
-        <div className="lg:col-span-6 xl:col-span-6 space-y-8">
+        <div className="lg:col-span-6 xl:col-span-6 space-y-8 text-center lg:text-left">
           <div className="reveal active">
             <span className="section-label">{t('hero.label')}</span>
           </div>
 
-          <h1 className="reveal active stagger-1 font-display leading-[0.88] tracking-display" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
+          <h1 className="reveal active stagger-1 font-display font-bold leading-[0.88] tracking-display" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
             {t('hero.title1')}{' '}
             <br />
             <span className="italic text-gradient-animated">{t('hero.title2')}</span>
@@ -111,11 +111,11 @@ export default function HeroSection() {
             <span className="italic text-gradient-animated">{t('hero.title3')}</span>
           </h1>
 
-          <p className="reveal active stagger-2 text-base text-foreground-muted leading-relaxed max-w-md">
+          <p className="reveal active stagger-2 text-base text-foreground-muted leading-relaxed max-w-md mx-auto lg:mx-0">
             {t('hero.sub')}
           </p>
 
-          <div className="reveal active stagger-3 flex flex-wrap gap-4">
+          <div className="reveal active stagger-3 flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link href="/portfolio" className="btn-primary">
               {t('hero.cta1')}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -125,7 +125,7 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          <div className="reveal active stagger-4 flex gap-10 pt-6 border-t border-primary/10">
+          <div className="reveal active stagger-4 flex gap-10 pt-6 border-t border-primary/10 justify-center lg:justify-start">
             {[
             { num: '200+', label: '3D Models' },
             { num: '50+', label: 'AI Projects' },
