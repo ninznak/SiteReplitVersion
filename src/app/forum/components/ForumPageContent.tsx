@@ -108,7 +108,9 @@ export default function ForumPageContent() {
           ].map((stat) => (
             <div key={stat.label} className="glass-card rounded-2xl p-4 text-center">
               <p className="font-display text-2xl font-semibold text-foreground">{stat.num}</p>
-              <p className="text-[10px] uppercase tracking-widest text-foreground-subtle mt-1">{stat.label}</p>
+              <p className="text-[10px] uppercase tracking-widest text-foreground-subtle mt-1">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
@@ -144,8 +146,16 @@ export default function ForumPageContent() {
         {/* New Thread Button */}
         <div className="flex justify-end mb-6">
           <Link href="/sign-up-login" className="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
             </svg>
             New Thread
           </Link>
@@ -168,7 +178,9 @@ export default function ForumPageContent() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     {thread.pinned && (
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-accent/20 text-accent-dark font-semibold">PINNED</span>
+                      <span className="text-[10px] px-2 py-0.5 rounded bg-accent/20 text-accent-dark font-semibold">
+                        PINNED
+                      </span>
                     )}
                     <span className="tag-pill text-[10px]">{thread.category}</span>
                     <span className="text-[10px] text-foreground-subtle">{thread.time}</span>
@@ -182,12 +194,20 @@ export default function ForumPageContent() {
                 {/* Stats */}
                 <div className="flex items-center gap-6 flex-shrink-0">
                   <div className="text-center">
-                    <p className="font-display text-lg font-semibold text-primary">{thread.replies}</p>
-                    <p className="text-[9px] uppercase tracking-widest text-foreground-subtle">replies</p>
+                    <p className="font-display text-lg font-semibold text-primary">
+                      {thread.replies}
+                    </p>
+                    <p className="text-[9px] uppercase tracking-widest text-foreground-subtle">
+                      replies
+                    </p>
                   </div>
                   <div className="text-center">
-                    <p className="font-display text-lg font-semibold text-foreground-muted">{thread.views}</p>
-                    <p className="text-[9px] uppercase tracking-widest text-foreground-subtle">views</p>
+                    <p className="font-display text-lg font-semibold text-foreground-muted">
+                      {thread.views}
+                    </p>
+                    <p className="text-[9px] uppercase tracking-widest text-foreground-subtle">
+                      views
+                    </p>
                   </div>
                 </div>
               </div>

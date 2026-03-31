@@ -12,7 +12,10 @@ export default function ContactSection() {
     const els = sectionRef.current?.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     if (!els) return;
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('active'); }),
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add('active');
+        }),
       { threshold: 0.08 }
     );
     els.forEach((el) => obs.observe(el));
@@ -29,7 +32,10 @@ export default function ContactSection() {
     <section ref={sectionRef} id="contact" className="pt-14 pb-28 relative z-10">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 50% 50% at 30% 60%, rgba(61,122,79,0.07) 0%, transparent 70%)' }}
+        style={{
+          background:
+            'radial-gradient(ellipse 50% 50% at 30% 60%, rgba(61,122,79,0.07) 0%, transparent 70%)',
+        }}
         aria-hidden="true"
       />
 
@@ -57,7 +63,9 @@ export default function ContactSection() {
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-widest text-foreground-subtle">{item.label}</p>
+                    <p className="text-[10px] uppercase tracking-widest text-foreground-subtle">
+                      {item.label}
+                    </p>
                     <p className="text-sm font-medium text-foreground mt-0.5">{item.value}</p>
                   </div>
                 </div>
@@ -72,12 +80,19 @@ export default function ContactSection() {
                 <div className="w-16 h-16 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center mx-auto text-3xl">
                   ✓
                 </div>
-                <h3 className="font-display text-2xl font-semibold text-foreground">Message Sent!</h3>
-                <p className="text-foreground-muted">I'll get back to you within 24 hours.</p>
-                <button onClick={() => setSubmitted(false)} className="btn-outline mt-4">Send Another</button>
+                <h3 className="font-display text-2xl font-semibold text-foreground">
+                  Message Sent!
+                </h3>
+                <p className="text-foreground-muted">I&apos;ll get back to you within 24 hours.</p>
+                <button onClick={() => setSubmitted(false)} className="btn-outline mt-4">
+                  Send Another
+                </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8 md:p-10 space-y-5">
+              <form
+                onSubmit={handleSubmit}
+                className="glass-card rounded-3xl p-8 md:p-10 space-y-5"
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-semibold text-foreground-muted mb-2 uppercase tracking-widest">
@@ -134,7 +149,19 @@ export default function ContactSection() {
                 </div>
                 <button type="submit" className="btn-primary w-full justify-center">
                   {t('contact.send')}
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
                 </button>
               </form>
             )}

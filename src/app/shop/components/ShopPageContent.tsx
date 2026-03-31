@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import { useLang } from '@/components/LanguageContext';
 
@@ -125,7 +125,9 @@ export default function ShopPageContent() {
                   <p className="text-sm text-foreground-muted mt-2">{product.description}</p>
                 </div>
                 <div className="flex items-center justify-between pt-3 border-t border-primary/10">
-                  <span className="font-display text-2xl font-semibold text-primary">{product.price}</span>
+                  <span className="font-display text-2xl font-semibold text-primary">
+                    {product.price}
+                  </span>
                   <button
                     onClick={() => addToCart(product.id)}
                     className="btn-primary text-sm py-2 px-4"
@@ -142,9 +144,17 @@ export default function ShopPageContent() {
         {cart.length > 0 && (
           <div className="fixed bottom-6 right-6 z-50">
             <div className="bg-primary text-white px-6 py-3 rounded-full shadow-green-lg flex items-center gap-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
               <span className="font-semibold">{cart.length} items</span>
             </div>

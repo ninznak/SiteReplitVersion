@@ -38,7 +38,6 @@
   font-display: swap;
 }
 
-
 /* Soft shadow on display headings */
 h1.font-display,
 h2.font-display {
@@ -56,29 +55,29 @@ h2.font-display {
 }
 
 /* Apply LT Remark to all display headings when Russian language is active */
-html[lang="ru"] h1,
-html[lang="ru"] h2,
-html[lang="ru"] h3,
-html[lang="ru"] .font-display {
+html[lang='ru'] h1,
+html[lang='ru'] h2,
+html[lang='ru'] h3,
+html[lang='ru'] .font-display {
   font-family: 'LTRemark', serif !important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
 
 :root {
-  --primary: #3D7A4F;
-  --primary-dark: #2A5A38;
-  --primary-light: #5A9E6F;
-  --accent: #A8C957;
-  --accent-dark: #8BAF3A;
-  --accent-light: #C5E07A;
+  --primary: #3d7a4f;
+  --primary-dark: #2a5a38;
+  --primary-light: #5a9e6f;
+  --accent: #a8c957;
+  --accent-dark: #8baf3a;
+  --accent-light: #c5e07a;
   --bg: #e9f9ca;
-  --bg-card: #FFFFFF;
-  --bg-dark: #0D1F12;
-  --bg-dark-2: #162B1C;
-  --foreground: #0D1F12;
-  --foreground-muted: #3A5A42;
-  --foreground-subtle: #6B8F72;
+  --bg-card: #ffffff;
+  --bg-dark: #0d1f12;
+  --bg-dark-2: #162b1c;
+  --foreground: #0d1f12;
+  --foreground-muted: #3a5a42;
+  --foreground-subtle: #6b8f72;
   --border: rgba(61, 122, 79, 0.15);
   --border-strong: rgba(61, 122, 79, 0.3);
   --glass: rgba(255, 255, 255, 0.65);
@@ -177,17 +176,28 @@ body {
   --delay: -18s;
 }
 
-
 @keyframes orbFloat {
-  0%   { transform: translate(0px, 0px) scale(1); }
-  25%  { transform: translate(40px, -60px) scale(1.05); }
-  50%  { transform: translate(-30px, -100px) scale(0.97); }
-  75%  { transform: translate(60px, -40px) scale(1.03); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(40px, -60px) scale(1.05);
+  }
+  50% {
+    transform: translate(-30px, -100px) scale(0.97);
+  }
+  75% {
+    transform: translate(60px, -40px) scale(1.03);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .orb { animation: none; }
+  .orb {
+    animation: none;
+  }
 }
 
 /* ─── GLASS CARD ─── */
@@ -207,14 +217,24 @@ body {
 
 /* ─── TEXT GRADIENT ─── */
 .text-gradient-green {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--primary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--accent) 50%,
+    var(--primary-light) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent-light) 60%, var(--accent) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--accent-dark) 0%,
+    var(--accent-light) 60%,
+    var(--accent) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -240,16 +260,24 @@ body {
 }
 
 @keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* ─── SCROLL REVEAL ─── */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
@@ -260,7 +288,9 @@ body {
 .reveal-left {
   opacity: 0;
   transform: translateX(-32px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-left.active {
@@ -271,7 +301,9 @@ body {
 .reveal-right {
   opacity: 0;
   transform: translateX(32px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-right.active {
@@ -280,11 +312,21 @@ body {
 }
 
 /* ─── STAGGER DELAYS ─── */
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+.stagger-4 {
+  transition-delay: 0.4s;
+}
+.stagger-5 {
+  transition-delay: 0.5s;
+}
 
 /* ─── NOISE TEXTURE OVERLAY ─── */
 .noise-overlay::after {
@@ -298,7 +340,9 @@ body {
 
 /* ─── PORTFOLIO CARD HOVER ─── */
 .portfolio-card {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease;
 }
 
 .portfolio-card:hover {
@@ -363,17 +407,41 @@ body {
   gap: 16px;
 }
 
-.bento-cell-hero { grid-column: span 7; grid-row: span 5; }
-.bento-cell-tall { grid-column: span 5; grid-row: span 3; }
-.bento-cell-wide { grid-column: span 5; grid-row: span 2; }
-.bento-cell-med  { grid-column: span 6; grid-row: span 3; }
-.bento-cell-sm   { grid-column: span 6; grid-row: span 2; }
+.bento-cell-hero {
+  grid-column: span 7;
+  grid-row: span 5;
+}
+.bento-cell-tall {
+  grid-column: span 5;
+  grid-row: span 3;
+}
+.bento-cell-wide {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+.bento-cell-med {
+  grid-column: span 6;
+  grid-row: span 3;
+}
+.bento-cell-sm {
+  grid-column: span 6;
+  grid-row: span 2;
+}
 
 /* ─── CUSTOM SCROLLBAR ─── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
 
 /* ─── BUTTON STYLES ─── */
 .btn-primary {
@@ -384,7 +452,10 @@ body {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   border-radius: 6px;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -404,7 +475,10 @@ body {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   border-radius: 6px;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -425,7 +499,10 @@ body {
   letter-spacing: 0.05em;
   border-radius: 6px;
   border: 1.5px solid var(--primary);
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -469,7 +546,9 @@ body {
   padding: 12px 16px;
   font-size: 0.9375rem;
   color: var(--foreground);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   outline: none;
   font-family: 'DM Sans', sans-serif;
 }
@@ -503,7 +582,9 @@ body {
   letter-spacing: 0.08em;
   padding: 4px 10px;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   cursor: pointer;
 }
 
@@ -556,7 +637,9 @@ body {
   height: 6px;
   border-radius: 50%;
   background: var(--border-strong);
-  transition: background 0.3s, transform 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s;
   cursor: pointer;
 }
 

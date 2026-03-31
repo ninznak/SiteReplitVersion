@@ -38,7 +38,10 @@ export default function ForumCTA() {
     const els = sectionRef?.current?.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     if (!els) return;
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('active'); }),
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add('active');
+        }),
       { threshold: 0.1 }
     );
     els?.forEach((el) => obs?.observe(el));
@@ -46,10 +49,17 @@ export default function ForumCTA() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="forum" className="pt-14 pb-28 bg-bg-dark relative overflow-hidden z-10">
+    <section
+      ref={sectionRef}
+      id="forum"
+      className="pt-14 pb-28 bg-bg-dark relative overflow-hidden z-10"
+    >
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 60% 60% at 70% 40%, rgba(168,201,87,0.1) 0%, transparent 70%)' }}
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 60% at 70% 40%, rgba(168,201,87,0.1) 0%, transparent 70%)',
+        }}
         aria-hidden="true"
       />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -57,7 +67,9 @@ export default function ForumCTA() {
           {/* Left: CTA */}
           <div className="lg:col-span-5 space-y-8 reveal-left">
             <div>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent">{t('forum.label')}</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent">
+                {t('forum.label')}
+              </span>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-white mt-4 leading-tight tracking-display">
                 {t('forum.title')}
               </h2>
@@ -73,14 +85,27 @@ export default function ForumCTA() {
               ]?.map((s) => (
                 <div key={s?.label}>
                   <p className="font-display text-2xl font-semibold text-white">{s?.num}</p>
-                  <p className="text-[10px] uppercase tracking-widest text-foreground-subtle mt-0.5">{s?.label}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground-subtle mt-0.5">
+                    {s?.label}
+                  </p>
                 </div>
               ))}
             </div>
 
             <Link href="/forum" className="btn-accent">
               {t('forum.join')}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
 
@@ -103,15 +128,22 @@ export default function ForumCTA() {
                     <p className="text-[11px] text-foreground-subtle mt-1">by {thread?.author}</p>
                   </div>
                   <div className="flex flex-col items-center gap-1 flex-shrink-0">
-                    <span className="font-display text-xl font-semibold text-accent">{thread?.replies}</span>
-                    <span className="text-[10px] uppercase tracking-widest text-foreground-subtle">replies</span>
+                    <span className="font-display text-xl font-semibold text-accent">
+                      {thread?.replies}
+                    </span>
+                    <span className="text-[10px] uppercase tracking-widest text-foreground-subtle">
+                      replies
+                    </span>
                   </div>
                 </div>
               </div>
             ))}
 
             {/* Blurred preview of more */}
-            <div className="relative overflow-hidden rounded-2xl glass-card-dark p-5 opacity-50 select-none" aria-hidden="true">
+            <div
+              className="relative overflow-hidden rounded-2xl glass-card-dark p-5 opacity-50 select-none"
+              aria-hidden="true"
+            >
               <div className="absolute inset-0 bg-gradient-to-t from-bg-dark to-transparent z-10" />
               <h4 className="font-display text-base font-semibold text-white">
                 How to combine ZBrush and AI in a single pipeline...

@@ -3,37 +3,45 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
 import { useLang } from '@/components/LanguageContext';
+// =============================================================================
+// ИЗОБРАЖЕНИЯ - Локальные или сетевые (см. src/config/images.ts)
+// =============================================================================
+// TODO: После загрузки изображений измени USE_LOCAL_IMAGES = true в src/config/images.ts
+import { networkImages, localImages, USE_LOCAL_IMAGES } from '@/config/images';
+
+// Выбор источника изображений
+const IMAGES = USE_LOCAL_IMAGES ? localImages.hero : networkImages.hero;
 
 const CAROUSEL_SLIDES = [
-{
-  id: 'ai-content',
-  src: 'https://img.rocket.new/generatedImages/rocket_gen_img_106584dfb-1764689812608.png',
-  alt: 'AI-generated surreal landscape with green tones and organic shapes',
-  tagKey: 'carousel.ai.tag',
-  titleKey: 'carousel.ai.title',
-  subtitleKey: 'carousel.ai.subtitle',
-  href: '/portfolio#ai',
-},
-{
-  id: 'commission',
-  src: "https://images.unsplash.com/photo-1691317836447-2710cac29f1e",
-  alt: 'Gold commemorative medal with intricate bas relief design',
-  tagKey: 'carousel.commission.tag',
-  titleKey: 'carousel.commission.title',
-  subtitleKey: 'carousel.commission.subtitle',
-  pulse: true,
-  href: '/homepage#featured',
-},
-{
-  id: '3d-models',
-  src: 'https://img.rocket.new/generatedImages/rocket_gen_img_16e57863a-1768351656360.png',
-  alt: 'Detailed 3D model of a commemorative coin with fine engraving',
-  tagKey: 'carousel.3d.tag',
-  titleKey: 'carousel.3d.title',
-  subtitleKey: 'carousel.3d.subtitle',
-  href: '/portfolio#3d',
-}];
-
+  {
+    id: 'ai-content',
+    src: IMAGES.aiContent,
+    alt: 'AI-generated surreal landscape with green tones and organic shapes',
+    tagKey: 'carousel.ai.tag',
+    titleKey: 'carousel.ai.title',
+    subtitleKey: 'carousel.ai.subtitle',
+    href: '/portfolio#ai',
+  },
+  {
+    id: 'commission',
+    src: IMAGES.commission,
+    alt: 'Gold commemorative medal with intricate bas relief design',
+    tagKey: 'carousel.commission.tag',
+    titleKey: 'carousel.commission.title',
+    subtitleKey: 'carousel.commission.subtitle',
+    pulse: true,
+    href: '/homepage#featured',
+  },
+  {
+    id: '3d-models',
+    src: IMAGES.models3d,
+    alt: 'Detailed3D model of a commemorative coin with fine engraving',
+    tagKey: 'carousel.3d.tag',
+    titleKey: 'carousel.3d.title',
+    subtitleKey: 'carousel.3d.subtitle',
+    href: '/portfolio#3d',
+  },
+];
 
 export default function HeroSection() {
   const { t } = useLang();
@@ -79,9 +87,9 @@ export default function HeroSection() {
 
   // Fixed positions for each stack slot (0=front/active, 1=middle, 2=back)
   const SLOTS = [
-    { x: 72,  y: 118, rotate: -2,   z: 3 },
-    { x: 157, y: 0,   rotate: 4,    z: 2 },
-    { x: 0,   y: 6,   rotate: -5,   z: 1 },
+    { x: 72, y: 118, rotate: -2, z: 3 },
+    { x: 157, y: 0, rotate: 4, z: 2 },
+    { x: 0, y: 6, rotate: -5, z: 1 },
   ];
   const CONTAINER_W = CARD_W + 157;
   const CONTAINER_H = CARD_H + 118;
@@ -89,15 +97,17 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-start pb-36 overflow-hidden pt-[120px]">
-      
+      className="relative flex items-start pb-36 overflow-hidden pt-[120px]"
+    >
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 60% 50%, rgba(168,201,87,0.22) 0%, rgba(61,122,79,0.12) 40%, transparent 70%)'
+          background:
+            'radial-gradient(ellipse 80% 60% at 60% 50%, rgba(168,201,87,0.22) 0%, rgba(61,122,79,0.12) 40%, transparent 70%)',
         }}
-        aria-hidden="true" />
-      
+        aria-hidden="true"
+      />
+
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-10 items-start relative z-10">
         {/* LEFT: Typography */}
         <div className="lg:col-span-6 xl:col-span-6 space-y-8 text-center lg:text-left pr-4">
@@ -105,12 +115,18 @@ export default function HeroSection() {
             <span className="section-label">{t('hero.label')}</span>
           </div>
 
-          <h1 className="reveal active stagger-1 font-display font-bold leading-[0.88] tracking-display" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
-            {t('hero.title1')}{' '}
+          <h1
+            className="reveal active stagger-1 font-display font-bold leading-[0.88] tracking-display"
+            style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}
+          >
+            {t('hero.title1')} <br />
+            <span className="italic text-gradient-animated" style={{ paddingRight: '0.2em' }}>
+              {t('hero.title2')}
+            </span>
             <br />
-            <span className="italic text-gradient-animated" style={{ paddingRight: '0.2em' }}>{t('hero.title2')}</span>
-            <br />
-            <span className="italic text-gradient-animated" style={{ paddingRight: '0.2em' }}>{t('hero.title3')}</span>
+            <span className="italic text-gradient-animated" style={{ paddingRight: '0.2em' }}>
+              {t('hero.title3')}
+            </span>
           </h1>
 
           <p className="reveal active stagger-2 text-base text-foreground-muted leading-relaxed max-w-md mx-auto lg:mx-0">
@@ -120,7 +136,18 @@ export default function HeroSection() {
           <div className="reveal active stagger-3 flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link href="/portfolio" className="btn-primary">
               {t('hero.cta1')}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </Link>
             <Link href="/homepage#shop" className="btn-outline">
               {t('hero.cta2')}
@@ -129,23 +156,23 @@ export default function HeroSection() {
 
           <div className="reveal active stagger-4 flex gap-10 pt-6 border-t border-primary/10 justify-center lg:justify-start">
             {[
-            { num: '200+', label: '3D Models' },
-            { num: '50+', label: 'AI Projects' },
-            { num: '12', label: 'Years Active' }]?.
-            map((s) =>
-            <div key={s?.label}>
+              { num: '200+', label: '3D Models' },
+              { num: '50+', label: 'AI Projects' },
+              { num: '12', label: 'Years Active' },
+            ]?.map((s) => (
+              <div key={s?.label}>
                 <p className="font-display text-3xl font-semibold text-foreground">{s?.num}</p>
-                <p className="text-xs text-foreground-subtle uppercase tracking-widest mt-0.5">{s?.label}</p>
+                <p className="text-xs text-foreground-subtle uppercase tracking-widest mt-0.5">
+                  {s?.label}
+                </p>
               </div>
-            )}
+            ))}
           </div>
         </div>
 
         {/* RIGHT: Scattered Card Deck */}
         <div className="lg:col-span-6 xl:col-span-6 hidden md:flex items-center justify-center parallax-img pt-16">
-          <div
-            className="relative"
-            style={{ width: CONTAINER_W, height: CONTAINER_H }}>
+          <div className="relative" style={{ width: CONTAINER_W, height: CONTAINER_H }}>
             {CAROUSEL_SLIDES.map((slide, idx) => {
               const stackPos = (idx - activeSlide + total) % total;
               const slot = SLOTS[stackPos];
@@ -168,14 +195,15 @@ export default function HeroSection() {
                     overflow: 'hidden',
                     boxShadow: '0 8px 30px rgba(13, 31, 18, 0.5)',
                   }}
-                  className="shadow-green-lg border border-primary/15">
-
+                  className="shadow-green-lg border border-primary/15"
+                >
                   <AppImage
                     src={slide.src}
                     alt={slide.alt}
                     fill
                     className="object-cover"
-                    priority={idx === 0} />
+                    priority={idx === 0}
+                  />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/60 via-transparent to-transparent" />
 
@@ -187,11 +215,18 @@ export default function HeroSection() {
                     <Link
                       href={slide.href}
                       onClick={(e) => e.stopPropagation()}
-                      className="group block hover:opacity-80 transition-opacity">
-                      <p className="font-display text-sm font-semibold text-white leading-tight group-hover:underline underline-offset-2">{t(slide.titleKey)}</p>
+                      className="group block hover:opacity-80 transition-opacity"
+                    >
+                      <p className="font-display text-sm font-semibold text-white leading-tight group-hover:underline underline-offset-2">
+                        {t(slide.titleKey)}
+                      </p>
                       <div className="flex items-center gap-2 mt-1">
-                        {slide.pulse && <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
-                        <span className="text-xs text-accent font-medium">{t(slide.subtitleKey)}</span>
+                        {slide.pulse && (
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                        )}
+                        <span className="text-xs text-accent font-medium">
+                          {t(slide.subtitleKey)}
+                        </span>
                       </div>
                     </Link>
                   </div>
@@ -202,14 +237,16 @@ export default function HeroSection() {
             {/* Dot navigation */}
             <div
               className="absolute flex gap-1.5"
-              style={{ bottom: -28, left: '50%', transform: 'translateX(-50%)' }}>
-              {CAROUSEL_SLIDES.map((_, idx) =>
-              <button
-                key={idx}
-                className={`hero-carousel-dot ${idx === activeSlide ? 'active' : ''}`}
-                onClick={() => goToSlide(idx)}
-                aria-label={`Go to slide ${idx + 1}`} />
-              )}
+              style={{ bottom: -28, left: '50%', transform: 'translateX(-50%)' }}
+            >
+              {CAROUSEL_SLIDES.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`hero-carousel-dot ${idx === activeSlide ? 'active' : ''}`}
+                  onClick={() => goToSlide(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -219,6 +256,6 @@ export default function HeroSection() {
         <span className="text-[15px] uppercase tracking-widest text-foreground-subtle">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
       </div>
-    </section>);
-
+    </section>
+  );
 }

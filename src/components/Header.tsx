@@ -88,9 +88,15 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             <div className="flex flex-col gap-1.5 w-6">
-              <span className={`h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-              <span className={`h-0.5 bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span
+                className={`h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
+              />
+              <span
+                className={`h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}
+              />
+              <span
+                className={`h-0.5 bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+              />
             </div>
           </button>
         </div>
@@ -114,11 +120,25 @@ export default function Header() {
             </Link>
           ))}
           <div className="flex items-center gap-3 mt-6">
-            <button className={`lang-btn text-base ${lang === 'ru' ? 'active' : ''}`} onClick={() => setLang('ru')}>RU</button>
+            <button
+              className={`lang-btn text-base ${lang === 'ru' ? 'active' : ''}`}
+              onClick={() => setLang('ru')}
+            >
+              RU
+            </button>
             <span className="text-foreground-subtle">/</span>
-            <button className={`lang-btn text-base ${lang === 'en' ? 'active' : ''}`} onClick={() => setLang('en')}>EN</button>
+            <button
+              className={`lang-btn text-base ${lang === 'en' ? 'active' : ''}`}
+              onClick={() => setLang('en')}
+            >
+              EN
+            </button>
           </div>
-          <Link href="/sign-up-login" onClick={() => setMenuOpen(false)} className="btn-primary mt-2">
+          <Link
+            href="/sign-up-login"
+            onClick={() => setMenuOpen(false)}
+            className="btn-primary mt-2"
+          >
             {t('nav.login')}
           </Link>
         </div>

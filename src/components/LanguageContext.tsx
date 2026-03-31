@@ -22,12 +22,14 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.title1': 'Where Craft',
     'hero.title2': 'Meets',
     'hero.title3': 'Intelligence',
-    'hero.sub': '3D bas relief, medals & coins alongside AI-generated images and video — one creative universe.',
+    'hero.sub':
+      '3D bas relief, medals & coins alongside AI-generated images and video — one creative universe.',
     'hero.cta1': 'Explore Portfolio',
     'hero.cta2': 'Visit Shop',
     'portfolio.label': 'Selected Works',
     'portfolio.title': 'Dual Creative Practice',
-    'portfolio.sub': 'Handcrafted 3D models and AI-driven content, each discipline informing the other.',
+    'portfolio.sub':
+      'Handcrafted 3D models and AI-driven content, each discipline informing the other.',
     'portfolio.tab3d': '3D Modeling',
     'portfolio.tabAI': 'AI Content',
     'portfolio.viewAll': 'View Full Portfolio',
@@ -35,7 +37,8 @@ const translations: Record<Lang, Record<string, string>> = {
     'featured.title': 'Latest Creations',
     'news.label': 'Updates',
     'news.title': 'News & Articles',
-    'news.sub': 'Insights on 3D modeling techniques, AI content generation, and the intersection of both.',
+    'news.sub':
+      'Insights on 3D modeling techniques, AI content generation, and the intersection of both.',
     'news.readMore': 'Read Article',
     'news.viewAll': 'All Articles',
     'shop.label': 'Shop',
@@ -45,11 +48,13 @@ const translations: Record<Lang, Record<string, string>> = {
     'shop.viewAll': 'Browse Shop',
     'forum.label': 'Community',
     'forum.title': 'Join the Discussion',
-    'forum.sub': 'Connect with fellow 3D artists and AI enthusiasts. Share work, get feedback, discuss techniques.',
+    'forum.sub':
+      'Connect with fellow 3D artists and AI enthusiasts. Share work, get feedback, discuss techniques.',
     'forum.join': 'Join Forum',
     'contact.label': 'Get in Touch',
     'contact.title': 'Commission or Collaborate',
-    'contact.sub': 'Available for custom 3D modeling commissions, AI content projects, and creative collaborations.',
+    'contact.sub':
+      'Available for custom 3D modeling commissions, AI content projects, and creative collaborations.',
     'contact.send': 'Send Message',
     'contact.name': 'Your Name',
     'contact.email': 'Email Address',
@@ -69,10 +74,12 @@ const translations: Record<Lang, Record<string, string>> = {
     'auth.terms': 'By creating an account you agree to our Terms and Privacy Policy.',
     'portfolio.3d.label': '3D Modeling',
     'portfolio.3d.title': 'Bas Relief, Medals & Coins',
-    'portfolio.3d.sub': 'Precision-crafted 3D models for production: numismatic designs, commemorative medals, bas relief panels, and custom souvenirs.',
+    'portfolio.3d.sub':
+      'Precision-crafted 3D models for production: numismatic designs, commemorative medals, bas relief panels, and custom souvenirs.',
     'portfolio.ai.label': 'AI Content',
     'portfolio.ai.title': 'Generated Images & Video',
-    'portfolio.ai.sub': 'Exploring the frontier of AI-assisted creativity — concept art, stylized renders, and short-form video.',
+    'portfolio.ai.sub':
+      'Exploring the frontier of AI-assisted creativity — concept art, stylized renders, and short-form video.',
     'portfolio.filter.all': 'All',
     'portfolio.filter.basRelief': 'Bas Relief',
     'portfolio.filter.medals': 'Medals',
@@ -83,7 +90,8 @@ const translations: Record<Lang, Record<string, string>> = {
     'portfolio.hero.label': 'Portfolio 2026',
     'portfolio.hero.title1': 'Craft &',
     'portfolio.hero.title2': 'Intelligence',
-    'portfolio.hero.desc': '12 years of 3D modeling — bas relief, medals, coins, and souvenirs — alongside an evolving AI content practice.',
+    'portfolio.hero.desc':
+      '12 years of 3D modeling — bas relief, medals, coins, and souvenirs — alongside an evolving AI content practice.',
     'carousel.ai.tag': 'AI Content',
     'carousel.ai.title': 'Generative Art Series',
     'carousel.ai.subtitle': 'Neural Landscapes Vol.3',
@@ -106,7 +114,8 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.title1': 'Где Мастерство',
     'hero.title2': 'Встречает',
     'hero.title3': 'Интеллект',
-    'hero.sub': '3D барельефы, медали и монеты вместе с AI-изображениями и видео — одна творческая вселенная.',
+    'hero.sub':
+      '3D барельефы, медали и монеты вместе с AI-изображениями и видео — одна творческая вселенная.',
     'hero.cta1': 'Смотреть Портфолио',
     'hero.cta2': 'Перейти в Магазин',
     'portfolio.label': 'Избранные Работы',
@@ -129,7 +138,8 @@ const translations: Record<Lang, Record<string, string>> = {
     'shop.viewAll': 'Весь Магазин',
     'forum.label': 'Сообщество',
     'forum.title': 'Присоединиться к Обсуждению',
-    'forum.sub': 'Общайтесь с 3D-художниками и AI-энтузиастами. Делитесь работами, получайте отзывы.',
+    'forum.sub':
+      'Общайтесь с 3D-художниками и AI-энтузиастами. Делитесь работами, получайте отзывы.',
     'forum.join': 'Войти на Форум',
     'contact.label': 'Связаться',
     'contact.title': 'Заказ или Сотрудничество',
@@ -150,13 +160,16 @@ const translations: Record<Lang, Record<string, string>> = {
     'auth.noAccount': 'Нет аккаунта?',
     'auth.hasAccount': 'Уже есть аккаунт?',
     'auth.orContinue': 'или продолжить через',
-    'auth.terms': 'Создавая аккаунт, вы принимаете Условия использования и Политику конфиденциальности.',
+    'auth.terms':
+      'Создавая аккаунт, вы принимаете Условия использования и Политику конфиденциальности.',
     'portfolio.3d.label': '3D Моделирование',
     'portfolio.3d.title': 'Барельефы, Медали и Монеты',
-    'portfolio.3d.sub': 'Точные 3D-модели для производства: нумизматические дизайны, памятные медали, барельефные панели и сувениры.',
+    'portfolio.3d.sub':
+      'Точные 3D-модели для производства: нумизматические дизайны, памятные медали, барельефные панели и сувениры.',
     'portfolio.ai.label': 'AI Контент',
     'portfolio.ai.title': 'Сгенерированные Изображения и Видео',
-    'portfolio.ai.sub': 'Исследование возможностей AI-творчества — концепт-арт, стилизованные рендеры и короткометражное видео.',
+    'portfolio.ai.sub':
+      'Исследование возможностей AI-творчества — концепт-арт, стилизованные рендеры и короткометражное видео.',
     'portfolio.filter.all': 'Все',
     'portfolio.filter.basRelief': 'Барельефы',
     'portfolio.filter.medals': 'Медали',
@@ -167,7 +180,8 @@ const translations: Record<Lang, Record<string, string>> = {
     'portfolio.hero.label': 'Портфолио 2026',
     'portfolio.hero.title1': 'Мастерство и',
     'portfolio.hero.title2': 'Интеллект',
-    'portfolio.hero.desc': '12 лет 3D-моделирования — барельефы, медали, монеты и сувениры — вместе с развивающейся AI-практикой.',
+    'portfolio.hero.desc':
+      '12 лет 3D-моделирования — барельефы, медали, монеты и сувениры — вместе с развивающейся AI-практикой.',
     'carousel.ai.tag': 'AI Контент',
     'carousel.ai.title': 'Серия Генеративного Арта',
     'carousel.ai.subtitle': 'Нейронные Пейзажи Vol.3',

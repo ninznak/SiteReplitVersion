@@ -3,9 +3,21 @@ import React from 'react';
 import AppImage from '@/components/ui/AppImage';
 
 const timeline = [
-  { year: '2014', title: 'Начало пути', desc: 'Первые шаги в 3D-моделировании и создание первых барельефов.' },
-  { year: '2017', title: 'Профессиональный рост', desc: 'Начало работы с нумизматикой и изготовлением медалей.' },
-  { year: '2020', title: 'Цифровая трансформация', desc: 'Внедрение AI-инструментов в творческий процесс.' },
+  {
+    year: '2014',
+    title: 'Начало пути',
+    desc: 'Первые шаги в 3D-моделировании и создание первых барельефов.',
+  },
+  {
+    year: '2017',
+    title: 'Профессиональный рост',
+    desc: 'Начало работы с нумизматикой и изготовлением медалей.',
+  },
+  {
+    year: '2020',
+    title: 'Цифровая трансформация',
+    desc: 'Внедрение AI-инструментов в творческий процесс.',
+  },
   { year: '2024', title: 'KurilenkoArt', desc: 'Запуск студии и объединение 3D и AI-практик.' },
 ];
 
@@ -28,7 +40,8 @@ export default function AboutPageContent() {
             KurilenkoArt
           </h1>
           <p className="text-foreground-muted mt-4 max-w-2xl mx-auto leading-relaxed">
-            Где 3D-мастерство встречает AI-интеллект. Создаём уникальные цифровые и физические произведения искусства.
+            Где 3D-мастерство встречает AI-интеллект. Создаём уникальные цифровые и физические
+            произведения искусства.
           </p>
         </div>
 
@@ -37,11 +50,13 @@ export default function AboutPageContent() {
           <div>
             <h2 className="font-display text-3xl font-semibold mb-6">Наша миссия</h2>
             <p className="text-foreground-muted leading-relaxed mb-4">
-              KurilenkoArt — это творческая студия, объединяющая традиционное 3D-моделирование с передовыми AI-технологиями. 
-              Мы создаём барельефы, медали, монеты и сувениры, а также исследуем возможности AI-генерации изображений и видео.
+              KurilenkoArt — это творческая студия, объединяющая традиционное 3D-моделирование с
+              передовыми AI-технологиями. Мы создаём барельефы, медали, монеты и сувениры, а также
+              исследуем возможности AI-генерации изображений и видео.
             </p>
             <p className="text-foreground-muted leading-relaxed">
-              Каждый проект — это синтез мастерства и инноваций, где ручная работа сочетается с цифровыми технологиями.
+              Каждый проект — это синтез мастерства и инноваций, где ручная работа сочетается с
+              цифровыми технологиями.
             </p>
           </div>
           <div className="relative aspect-square rounded-3xl overflow-hidden">
@@ -88,7 +103,9 @@ export default function AboutPageContent() {
                   </div>
                   <div className="glass-card rounded-2xl p-5">
                     <span className="text-accent-dark font-semibold">{item.year}</span>
-                    <h3 className="font-display text-lg font-semibold text-foreground mt-1">{item.title}</h3>
+                    <h3 className="font-display text-lg font-semibold text-foreground mt-1">
+                      {item.title}
+                    </h3>
                     <p className="text-foreground-muted text-sm mt-2">{item.desc}</p>
                   </div>
                 </div>
@@ -107,7 +124,9 @@ export default function AboutPageContent() {
           ].map((stat) => (
             <div key={stat.label} className="glass-card rounded-2xl p-6 text-center">
               <p className="font-display text-3xl font-semibold text-primary">{stat.num}</p>
-              <p className="text-[10px] uppercase tracking-widest text-foreground-subtle mt-2">{stat.label}</p>
+              <p className="text-[10px] uppercase tracking-widest text-foreground-subtle mt-2">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>

@@ -8,7 +8,8 @@ const articles = [
     id: 1,
     category: 'Technique',
     title: 'Bas Relief Depth: Achieving Sub-Millimeter Precision in ZBrush',
-    excerpt: 'How to calibrate your ZBrush brushes and subdivision levels to produce production-ready bas relief geometry for casting.',
+    excerpt:
+      'How to calibrate your ZBrush brushes and subdivision levels to produce production-ready bas relief geometry for casting.',
     date: 'March 14, 2026',
     readTime: '8 min read',
     img: '/assets/images/news_article.svg',
@@ -19,7 +20,8 @@ const articles = [
     id: 2,
     category: 'AI',
     title: 'Midjourney v7 for Numismatic Concept Art',
-    excerpt: 'A workflow for generating coin and medal concept sketches with AI before committing to 3D production.',
+    excerpt:
+      'A workflow for generating coin and medal concept sketches with AI before committing to 3D production.',
     date: 'March 8, 2026',
     readTime: '6 min read',
     img: '/assets/images/portfolio_ai_1.svg',
@@ -30,7 +32,8 @@ const articles = [
     id: 3,
     category: 'Industry',
     title: 'The 2026 Commemorative Medal Market: Trends & Commissions',
-    excerpt: 'An overview of the current demand for custom medals, what clients want, and how to price your work.',
+    excerpt:
+      'An overview of the current demand for custom medals, what clients want, and how to price your work.',
     date: 'Feb 28, 2026',
     readTime: '5 min read',
     img: '/assets/images/portfolio_3d_2.svg',
@@ -41,7 +44,8 @@ const articles = [
     id: 4,
     category: 'AI',
     title: 'Sora & Kling: AI Video for 3D Model Presentations',
-    excerpt: 'Using AI video tools to create cinematic turntable animations and contextual presentations for 3D models.',
+    excerpt:
+      'Using AI video tools to create cinematic turntable animations and contextual presentations for 3D models.',
     date: 'Feb 20, 2026',
     readTime: '7 min read',
     img: '/assets/images/portfolio_ai_2.svg',
@@ -52,7 +56,8 @@ const articles = [
     id: 5,
     category: 'Tutorial',
     title: 'From Sketch to Production: A Complete Medal Design Workflow',
-    excerpt: 'Step-by-step guide from initial concept sketch through 3D modeling to final production files.',
+    excerpt:
+      'Step-by-step guide from initial concept sketch through 3D modeling to final production files.',
     date: 'Feb 15, 2026',
     readTime: '12 min read',
     img: '/assets/images/portfolio_3d_1.svg',
@@ -63,7 +68,8 @@ const articles = [
     id: 6,
     category: 'Business',
     title: 'Pricing Your 3D Work: A Practical Guide for Artists',
-    excerpt: 'How to calculate fair prices for your 3D modeling services, including time estimation and material costs.',
+    excerpt:
+      'How to calculate fair prices for your 3D modeling services, including time estimation and material costs.',
     date: 'Feb 10, 2026',
     readTime: '9 min read',
     img: '/assets/images/news_article.svg',
@@ -114,11 +120,20 @@ export default function NewsPageContent() {
                   </h2>
                   <p className="text-foreground-muted leading-relaxed mb-6">{featured.excerpt}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] text-foreground-subtle uppercase tracking-widest">{featured.date}</span>
+                    <span className="text-[11px] text-foreground-subtle uppercase tracking-widest">
+                      {featured.date}
+                    </span>
                     <button className="flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors">
                       {t('news.readMore')}
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
                     </button>
                   </div>
@@ -145,7 +160,9 @@ export default function NewsPageContent() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[10px] font-semibold uppercase tracking-widest text-accent-dark">{article.category}</span>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-accent-dark">
+                    {article.category}
+                  </span>
                   <span className="text-[10px] text-foreground-subtle">·</span>
                   <span className="text-[10px] text-foreground-subtle">{article.readTime}</span>
                 </div>
@@ -153,7 +170,9 @@ export default function NewsPageContent() {
                   {article.title}
                 </h3>
                 <p className="text-sm text-foreground-muted line-clamp-2">{article.excerpt}</p>
-                <span className="text-[11px] text-foreground-subtle block mt-4">{article.date}</span>
+                <span className="text-[11px] text-foreground-subtle block mt-4">
+                  {article.date}
+                </span>
               </div>
             </div>
           ))}
